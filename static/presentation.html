@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emanuele's Portfolio Website - Presentation</title>
+    <style>
+        :root {
+            --primary-color: #1e3c78;
+            --secondary-color: #d4af37;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #fff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .screenshot-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #c19b2e;
+        }
+        
+        .file-list {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+        }
+        
+        .file-list h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .file-list ul {
+            list-style-type: none;
+        }
+        
+        .file-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .file-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .file-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .file-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Emanuele's Portfolio Website</h1>
+            <p>A modern, responsive portfolio website for showcasing professional skills and projects</p>
+        </header>
+        
+        <div class="screenshot-container">
+            <img src="images/website_screenshot.jpg" alt="Portfolio Website Screenshot" class="screenshot">
+        </div>
+        
+        <h2>Project Overview</h2>
+        <p>
+            This portfolio website was designed for Emanuele to showcase his programming skills, projects, and professional experience. 
+            The website features a modern, responsive design with a cobalt blue and gold color scheme, interactive elements, and a 
+            user-friendly interface that works seamlessly across all devices.
+        </p>
+        
+        <h2>Key Features</h2>
+        <ul>
+            <li>Responsive design that adapts to all screen sizes</li>
+            <li>Interactive project showcase with filtering capabilities</li>
+            <li>Dark/light mode toggle for user preference</li>
+            <li>Smooth scrolling navigation and animations</li>
+            <li>Contact form with validation</li>
+            <li>Optimized for performance and accessibility</li>
+        </ul>
+        
+        <h2>File Structure</h2>
+        
+        <div class="file-list">
+            <h3>HTML Files</h3>
+            <ul>
+                <li><a href="index.html" target="_blank">index.html</a> - Main portfolio website</li>
+                <li><a href="presentation.html" target="_blank">presentation.html</a> - This presentation page</li>
+            </ul>
+        </div>
+        
+        <div class="file-list">
+            <h3>CSS Files</h3>
+            <ul>
+                <li><a href="css/normalize.css" target="_blank">normalize.css</a> - CSS reset/normalize</li>
+                <li><a href="css/styles.css" target="_blank">styles.css</a> - Main stylesheet</li>
+                <li><a href="css/components.css" target="_blank">components.css</a> - Component-specific styles</li>
+            </ul>
+        </div>
+        
+        <div class="file-list">
+            <h3>JavaScript Files</h3>
+            <ul>
+                <li><a href="js/main.js" target="_blank">main.js</a> - Main JavaScript functionality</li>
+            </ul>
+        </div>
+        
+        <div class="file-list">
+            <h3>Images</h3>
+            <ul>
+                <li><a href="images/profile_photo.png" target="_blank">profile_photo.png</a> - Emanuele's profile photo</li>
+                <li><a href="images/logo.png" target="_blank">logo.png</a> - Website logo</li>
+                <li>Project thumbnails (6 images)</li>
+                <li>Social media icons (4 images)</li>
+            </ul>
+        </div>
+        
+        <div class="file-list">
+            <h3>Documentation</h3>
+            <ul>
+                <li><a href="README.md" target="_blank">README.md</a> - Comprehensive documentation</li>
+            </ul>
+        </div>
+        
+        <h2>Customization</h2>
+        <p>
+            The portfolio website is designed to be easily customizable. You can modify the content, colors, images, and layout 
+            to suit your specific needs. Detailed customization instructions are provided in the README.md file.
+        </p>
+        
+        <div class="cta-container">
+            <a href="index.html" class="btn" target="_blank">View Live Demo</a>
+        </div>
+        
+        <footer>
+            <p>Created for Emanuele's Professional Portfolio - 2025</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../sphere-visualization"
+		},
+		{
+			"path": "../../dockerAgents"
+		}
+	],
+	"settings": {}
+}

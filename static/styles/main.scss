@@ -1,0 +1,80 @@
+
+
+@import '../styles/about.scss';
+@import '../styles/contact.scss';
+@import '../styles/experience.scss';
+@import '../styles/font-section.scss';
+@import '../styles/hero-section.scss';
+@import '../styles/LKVariables.scss';
+@import '../styles/portfolio.scss';
+@import '../styles/skills.scss';
+@import '../styles/testimonials.scss';
+@import '../styles/navbar.scss';
+@import '../styles/visualization/visualization_main.scss';
+@import '../styles/footer.scss';
+
+// Ensure theme variables are always available globally
+:root {
+  --background-color: #fcfdfd;
+  --text-color: #111313;
+  --primary-color: #65aea9;
+  --secondary-color: #97d8d1;
+  --accent-color: #72dad3;
+}
+
+.dark-mode {
+  --background-color: #020303;
+  --text-color: #eceeee;
+  --primary-color: #519a95;
+  --secondary-color: #276861;
+  --accent-color: #258d86;
+}
+
+section {
+    padding: 0;
+    margin: 0 auto;
+}
+
+#hero,
+#skills,
+#experience,
+#testimonials,
+#contact {
+    background: radial-gradient(circle,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 74%, rgba(67, 217, 67, 1) 100%);
+}
+
+body.dark-mode #hero,
+body.dark-mode #skills,
+body.dark-mode #experience,
+body.dark-mode #testimonials,
+body.dark-mode #contact {
+    background: radial-gradient(circle,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 57%, rgba(67, 160, 217, 1) 100%);
+}
+.section-title {
+    text-align: center;
+    position: relative;
+    z-index:2;
+}
+  
+.section-title h2 {
+    display: inline-block;
+    font-size: $font-size-h2;
+    z-index: 3;
+}
+  
+.section-title h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+}
+
+.title-underline {
+  display: block;
+  width: 2.5em;
+  height: 2px;
+  margin: 0.2em auto 0.5em auto;
+}
+
+.title-underline + * {
+  margin-top: 1em;
+}

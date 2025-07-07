@@ -1,0 +1,30 @@
+[
+  {
+    "image": "../images/project_1.jpg",
+    "name": "Project Name 1",
+    "description": "Web Development",
+    "category": "web",
+    "link": "#"
+  },
+  {
+    "image": "../images/project_2.jpg",
+    "name": "Project Name 2",
+    "description": "UI/UX Design",
+    "category": "design",
+    "link": "#"
+  },
+  {
+    "image": "../images/project_3.jpg",
+    "name": "Project Name 3",
+    "description": "Mobile Application",
+    "category": "app",
+    "link": "#"
+  },
+  {
+    "image": "../images/project_4.jpg",
+    "name": "Project Name 4",
+    "description": "Web Development",
+    "category": "web",
+    "link": "#"
+  }
+]

@@ -1,0 +1,196 @@
+@import '../styles/LKVariables.scss';
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+.p5Canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Lower z-index to place it behind the text */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: $section-padding;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 1.5rem;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: $border-hover-width;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.2); // Default for light mode
+    backdrop-filter: blur(6px); // Apply blur effect
+    padding: 1rem;
+    border-radius: $border-radius-md;
+    transition: background-color $transition-duration;
+
+    // Adjust background color based on dark mode
+    body.dark-mode & {
+        background-color: rgba(0, 0, 0, 0.5); // Lighten background in dark mode
+    }
+}
+
+.about-text h3 {
+    color: $primary-color;
+    margin-bottom: $font-size-h5;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+}
+
+.about-text p {
+    margin-bottom: $font-size-base;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-regular;
+}
+
+.about-highlight {
+    color: $primary-color;
+    font-weight: $font-weight-bold;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: $border-radius-md;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: var(--background-dark, #0a0a0f);
+  font-weight: 600;
+  overflow: hidden;
+  transition: transform $transition-duration, box-shadow $transition-duration;
+  // Dark mode text color override
+  body.dark-mode & {
+    color: var(--text-primary, #fff);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 201, 255, 0.4);
+
+    &::before {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.button-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  border-radius: inherit;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity $transition-duration;
+}
+
+.primary-button:hover .button-glow {
+  opacity: 0.3;
+}
+/* ===== SECONDARY BUTTON ===== */
+.secondary-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 1.5px solid $secondary-color;
+  cursor: pointer;
+  position: relative;
+  border-radius: $border-radius-md;
+  background: rgba(255, 255, 255, 0.18); // Glassmorphism effect
+  color: $secondary-color;
+  font-weight: 600;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition: 
+    background-color $transition-duration,
+    color $transition-duration,
+    box-shadow $transition-duration,
+    border-color $transition-duration;
+
+  // Dark mode text color override
+  body.dark-mode & {
+    background: rgba(0, 0, 0, 0.35);
+    color: var(--text-primary, #fff);
+    border-color: $primary-color;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.18),
+      transparent
+    );
+    opacity: 0.7;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.28);
+    color: $primary-color;
+    box-shadow: 0 8px 24px rgba(0, 201, 255, 0.2);
+    border-color: $primary-color;
+
+    &::before {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.secondary-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, $secondary-color, $primary-color);
+  border-radius: inherit;
+  filter: blur(16px);
+  opacity: 0;
+  transition: opacity $transition-duration;
+}
+
+.secondary-button:hover .secondary-glow {
+  opacity: 0.18;
+}
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+

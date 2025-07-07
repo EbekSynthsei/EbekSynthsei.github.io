@@ -1,0 +1,79 @@
+// Responsive font size for .title-custom on very small screens
+@media (max-width: 480px) {
+  .title-custom {
+    font-size: 2.1rem;
+  }
+}
+@import "../styles/LKVariables.scss";
+
+// Font Variables
+$title-font-size-lg: 6rem;
+$title-font-size-md: 5rem;
+$title-font-size-sm: 3.5rem;
+$font-size-small: 0.875rem;
+$icon-size: 2.5rem;
+
+// Border Hover Styles
+.border-hover {
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+.border-hover:hover {
+  border-bottom: 3px solid $text-color;
+  transition: all 0.2s ease-in-out;
+}
+
+// Title Custom Styles
+.title-custom {
+  font-weight: 900;
+  font-size: $title-font-size-lg;
+  line-height: 1;
+  z-index: 1;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .title-custom {
+    font-size: $title-font-size-md;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-custom {
+    font-size: $title-font-size-sm;
+  }
+}
+
+@media (min-width: 1025px) {
+  .overlay-custom {
+    z-index: 1;
+    padding-left: 8rem;
+  }
+}
+
+// Additional Styles
+.hero-section {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin-top: 0; // Ensure no spacing between navbar and hero-section
+
+  .lead {
+    color: $secondary-color;
+  }
+
+  .rounded-6 {
+    background-color: $accent-color;
+    width: 100px;
+    height: 100px;
+    font-size: $icon-size;
+  }
+
+  // Updated to use the consolidated `$font-size-small` from `LKVariables.scss`
+  .collapse ul li {
+    font-size: $font-size-small;
+  }
+
+  .p-3 {
+    background-color: $secondary-color;
+    border-radius: 1.5rem;
+  }
+}

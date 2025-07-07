@@ -1,0 +1,144 @@
+@import '../styles/LKVariables.scss';
+
+/* ===== EXPERIENCE SECTION ===== */
+
+.experience {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 2px;
+  background-color: var(--primary-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: $section-padding;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  border: 3px solid var(--primary-color);
+  z-index: 1;
+}
+
+
+
+.timeline-content {
+  background-color: rgba(255, 255, 255, 0.2); // Default for light mode, match .about-text
+  backdrop-filter: blur(6px);
+  color: var(--text-color);
+  padding: $font-size-small;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-sm;
+  transition: background-color $transition-duration;
+}
+
+
+.dark-mode .timeline-content {
+  background-color: rgba(0, 0, 0, 0.5); // Match .about-text dark mode
+  color: var(--text-color);
+}
+
+
+.timeline-date,
+.timeline-title,
+.timeline-company,
+.timeline-description {
+  color: var(--text-color);
+}
+
+
+.dark-mode .timeline-date,
+.dark-mode .timeline-title,
+.dark-mode .timeline-company,
+.dark-mode .timeline-description {
+  color: var(--text-color);
+}
+
+
+.timeline-date {
+  color: var(--primary-color);
+  font-weight: $font-weight-bold;
+  margin-bottom: $font-size-small;
+}
+
+.timeline-title {
+  font-size: 1.25rem;
+  margin-bottom: $font-size-small;
+}
+
+
+.timeline-company {
+  font-weight: $font-weight-regular;
+  color: var(--text-color);
+  margin-bottom: $font-size-small;
+}
+
+
+.timeline-description {
+  color: var(--text-color);
+}
+
+.resume-download {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    padding-left: 0;
+    width: 50%;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: $section-padding;
+    text-align: right;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .timeline-item:nth-child(even) {
+    padding-left: $section-padding;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .timeline-marker {
+    left: auto;
+    right: -9px;
+    top: 15px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-marker {
+    right: auto;
+    left: -9px;
+  }
+}

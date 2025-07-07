@@ -1,0 +1,25 @@
+@import '../LKVariables.scss';
+
+#info h3{
+  color: $primary-color;
+  margin-bottom: $font-size-h5;
+  border-bottom: 2px solid $secondary-color;
+  padding-bottom: $font-size-small;
+  display: inline-block;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+}
+
+@media (max-width: 768px) {
+  #info {
+    font-size: $font-size-xs;
+    padding: 10px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #info {
+    opacity: 0.6;
+  }
+}

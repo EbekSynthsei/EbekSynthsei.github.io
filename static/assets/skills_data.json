@@ -1,0 +1,40 @@
+{
+  "person": {
+    "Development": [
+      {"Unity Engine": "Intermediate"},
+      {"JavaScript": "Intermediate"},
+      {"Java": "Advanced"},
+      {"SQL": "Advanced"},
+      {"C#": "Advanced"},
+      {"Spring Framework": "Advanced"},
+      {"Bash Scripting": "Advanced"},
+      {"Database Management": "Advanced"}
+    ],
+    "Dev Ops": [
+      {"Docker": "Advanced"},
+      {"Kubernetes": "Advanced"},
+      {"CI/CD": "Advanced"},
+      {"Linux": "Advanced"},
+      {"Git/GitLab": "Advanced"},
+      {"Jenkins": "Advanced"}
+    ],
+    "Design & Audio": [
+      {"Audio Restoration": "Advanced"},
+      {"Sound Design": "Expert"},
+      {"Live Audio Engineering": "Advanced"},
+      {"Studio Setup & Acoustics": "Advanced"},
+      {"Wwise Middleware": "Advanced"},
+      {"Pure Data": "Advanced"}
+    ],
+    "Other Skills": [
+      {"Test Driven Development": "Advanced"},
+      {"Agile/Scrum": "Advanced"},
+      {"Problem Solving": "Advanced"},
+      {"Teamwork": "Advanced"},
+      {"Critical Thinking": "Advanced"},
+      {"Authentication & Authorization Protocols": "Advanced"},
+      {"OWASP Top 10 Security": "Intermediate"},
+      {"Continuous Learning": "Advanced"}
+    ]
+  }
+}

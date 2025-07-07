@@ -1,0 +1,15 @@
+@import '../LKVariables.scss';
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background: $background-color;
+  color: $text-color;
+  padding: 10px 14px;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-md;
+  font-size: $font-size-small;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity $transition-duration-fast;
+}

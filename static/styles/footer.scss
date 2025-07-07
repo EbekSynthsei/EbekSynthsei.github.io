@@ -1,0 +1,105 @@
+/* Footer Styles */
+.site-footer {
+  padding: 30px 0;
+  position: relative;
+}
+// Dark mode styles for footer
+.dark-mode .site-footer {
+  color: #eee;
+}
+.site-footer .container {
+  max-width: 900px;
+  margin: auto;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo a {
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-navigation .footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.footer-navigation .footer-menu a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-social .social-link {
+  margin-left: 10px;
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+// Responsive styles
+@media (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5em;
+  }
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+  .footer-navigation .footer-menu {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    padding-left: 0;
+    width: 100%;
+  }
+  .footer-navigation .footer-menu li {
+    width: 100%;
+    text-align: left;
+  }
+  .footer-navigation .footer-menu a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+  .footer-social {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-footer .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .footer-logo a {
+    font-size: 1.1em;
+  }
+}
+
+/* Game Styles */
+.footer-game {
+  margin: 20px auto;
+  text-align: center;
+}
+#dino-game {
+  background: #f7f7f7;
+  border: 1px solid #999;
+  display: block;
+  margin: auto;
+}
+#jump-btn {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 1em;
+  cursor: pointer;
+}

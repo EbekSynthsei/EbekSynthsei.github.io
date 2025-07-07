@@ -1,0 +1,109 @@
+// Consolidated theme variables
+$themes: (
+  light: (
+    text: #111313,
+    background: #fcfdfd,
+    primary: #65aea9,
+    secondary: #97d8d1,
+    accent: #72dad3,
+  ),
+  dark: (
+    text: #eceeee,
+    background: #020303,
+    primary: #519a95,
+    secondary: #276861,
+    accent: #258d86,
+  )
+);
+
+// Mixin to apply theme variables
+@mixin theme($mode) {
+  $theme: map-get($themes, $mode);
+  color: map-get($theme, text);
+  background-color: map-get($theme, background);
+  --primary-color: #{map-get($theme, primary)};
+  --secondary-color: #{map-get($theme, secondary)};
+  --accent-color: #{map-get($theme, accent)};
+}
+
+// Apply themes based on body class
+body {
+  @include theme(light);
+
+  &.dark-mode {
+    @include theme(dark);
+  }
+}
+
+// Font Variables
+$font-family-primary: 'JetBrains Mono NL', monospace;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Font Sizes
+$font-size-base: 16px; // Default base font size
+$font-size-h1: 4.210rem; // 67.36px
+$font-size-h2: 3.158rem; // 50.56px
+$font-size-h3: 2.369rem; // 37.92px
+$font-size-h4: 1.777rem; // 28.48px
+$font-size-h5: 1.333rem; // 21.28px
+$font-size-small: 0.875rem; // Updated to match hero-section usage
+$font-size-xs: 0.75rem; // 12px
+
+// Color Variables
+$primary-color: #64aea9;
+$secondary-color: #98d8d4;
+$accent-color: #70d9d2;
+$text-color: #121414;
+$background-color: #fcfdfd;
+
+// Border Styles
+$border-radius-lg: 0.5rem; // 8px
+// Border Hover Styles
+$border-hover-width: 3px;
+$border-hover-transition: all 0.2s ease-in-out;
+$border-radius-md: 0.375rem; // 6px
+$border-radius-small: 0.25rem; // 4px
+// Section IDs
+$section-ids: (
+  about: "about-container",
+  skills: "skills-container",
+  portfolio: "portfolio-container",
+  experience: "experience-container",
+  testimonials: "testimonials-container",
+  contact: "contact-container"
+);
+
+// Common Section Styles
+$section-padding: 4rem 0;
+
+// Add a variable for section spacing
+$section-spacing: 1rem;
+
+//Transition and animation
+$transition-duration: 0.3s;
+$transition-duration-fast: 0.2s;
+// ===== Portfolio Section Variables =====
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 6px 10px rgba(0, 0, 0, 0.15);
+
+.text-button {
+  color: var(--accent-color);
+  background-color: var(--secondary-color);
+  border: 2px solid var(--accent-color);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: $font-size-base;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  text-decoration: underline;
+  transition: color $transition-duration, background-color $transition-duration;
+
+  &:hover {
+    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow-sm;
+  }
+}

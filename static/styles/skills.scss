@@ -1,0 +1,57 @@
+@import '../styles/LKVariables.scss';
+
+// Make the skills sphere canvas clearly visible
+#skills-sphere canvas {
+  border: 3px solid;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(30,144,255,0.25);
+}
+
+
+/* ===== SKILLS SECTION ===== */
+.skills {
+  background-color: $background-color;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: $section-padding;
+}
+
+.skill-category {
+  margin-bottom: $section-padding;
+}
+
+.skill-category h3 {
+  color: $primary-color;
+  margin-bottom: $font-size-h5;
+  border-bottom: 2px solid $secondary-color;
+  padding-bottom: $font-size-small;
+  display: inline-block;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $font-size-base;
+}
+
+.skill-item {
+  background-color: $background-color;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-regular;
+  transition: all $transition-duration;
+}
+
+
+// Desktop hover and mobile touch effect
+.skill-item:hover,
+.skill-item.touched {
+  background-color: $primary-color;
+  color: $background-color;
+  transform: translateY(-3px);
+}
